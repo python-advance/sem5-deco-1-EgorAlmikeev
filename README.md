@@ -9,7 +9,24 @@
 1. Для декоратора once cравнить работу этой функции в случае сохранения внутри func и внутри inner параметра called.
 2. Для декоратора deprecated проанализировать его работу и сделать (при необходимости) рефакторинг при использовании модуля warnings. 
 3. В какой момент выводится предупреждение deprecated? Возможно ли сделать предупреждение для других ситуаций (например, при вызове функции)?
-4. Оптимизировать функцию memoized, сделав проще механизм создания immutable ключа.
+4. Оптимизировать функцию memorized, сделав проще механизм создания immutable ключа.
+   __Код функции:__
+   ```python
+   import functools
+
+   def memoized(func): 
+      cache = {}
+    
+    @functools.wraps(func)
+    def inner(*args, **kwargs):
+      key = args + tuple(sorted(kwargs.items()))
+        
+      if key not in cache:
+         cache[key] = func(*args, **kwargs)
+      return cache[key]
+    
+    return inner 
+   ```
 
 ### Самостоятельная работа
 
