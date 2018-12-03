@@ -12,7 +12,7 @@
 4. Оптимизировать функцию memorized, сделав проще механизм создания immutable ключа.
    __Код функции:__
    ```python
-   def memoized(func):
+   def memorized(func):
     cache = {}
     @functools.wraps(func)
     def inner(*args, **kwargs):
