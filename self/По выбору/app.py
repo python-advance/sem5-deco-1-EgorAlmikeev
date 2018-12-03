@@ -1,3 +1,5 @@
+# задание по выбору номер 3
+
 def logger(func):
     import datetime
     with open("log.txt", "a") as file:
