@@ -26,7 +26,8 @@
    > Ссылки на документацию:
    > * https://www.cbr.ru/development
    > * https://www.cbr.ru/development/SXML
-   > <br>Пример запроса: http://www.cbr.ru/scripts/XML_daily.asp
+   > 
+   > Пример запроса: http://www.cbr.ru/scripts/XML_daily.asp
    
    
 2. __Одно на выбор__
