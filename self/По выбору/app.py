@@ -2,6 +2,15 @@
 
 def logger(func):
     import datetime
-    with open("log.txt", "a") as file:
-        file.write("{0:%Y-%m-%d %H:%M:%S}".format(datetime.datetime.now()) + " : " + func.__name__ + "\n")
-    return func
+    import functools
+    
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        time = datetime.datetime.now()
+        func(*args, **kwargs)
+        time = datetime.datetime.now() - time
+    
+        with open("log.txt", "a") as file:
+            file.write(time)
+            
+    return wrapper
