@@ -2,7 +2,7 @@ def logger(func):
     import functools
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
-        result = func(*args, *kwargs)
+        result = func(*args, **kwargs)
         with open("./log.txt", 'a') as file:
             file.write("=" * 20)
             file.write("\n")
