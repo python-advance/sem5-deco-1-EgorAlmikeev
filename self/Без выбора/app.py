@@ -39,7 +39,7 @@ if __name__ == "__main__":
 
     while True:
         try:
-            currency_char = currency_chars[(int(input("set: "))) - 1]
+            currency_char = currency_chars[abs(int(input("set: "))) - 1]
         except IndexError:
             print("No such currency")
             continue
