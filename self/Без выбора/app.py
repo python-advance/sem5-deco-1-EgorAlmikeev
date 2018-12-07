@@ -48,5 +48,11 @@ if __name__ == "__main__":
             continue
         break
 
-    rubles = int(input("Rubles: "))
+        while True:
+        try:
+            rubles = abs(int(input("Rubles: ")))
+        except TypeError:
+            print("Are you okay?")
+            continue
+        break
     print(rubles, "RUB =", rubles_to_currency(rubles, currencies, currency_char), currency_char)
