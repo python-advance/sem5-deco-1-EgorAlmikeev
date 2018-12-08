@@ -43,7 +43,7 @@ if __name__ == "__main__":
         except IndexError:
             print("No such currency")
             continue
-        except TypeError:
+        except (TypeError, ValueError):
             print("Are you okay?")
             continue
         break
@@ -51,7 +51,7 @@ if __name__ == "__main__":
     while True:
         try:
             rubles = abs(int(input("Rubles: ")))
-        except TypeError:
+        except (TypeError, ValueError):
             print("Are you okay?")
             continue
         break
