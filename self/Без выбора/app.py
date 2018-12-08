@@ -48,7 +48,7 @@ if __name__ == "__main__":
             continue
         break
 
-        while True:
+    while True:
         try:
             rubles = abs(int(input("Rubles: ")))
         except TypeError:
