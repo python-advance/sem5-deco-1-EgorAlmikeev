@@ -1,3 +1,6 @@
+import urllib.request
+from xml.etree import ElementTree as ET
+
 def logger(f):
     import functools
     @functools.wraps(f)
