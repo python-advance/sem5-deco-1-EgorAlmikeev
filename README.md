@@ -1,4 +1,4 @@
-# sem5-deco-1
+# sem5-deco-1 :+1:
 
 [Ссылка для создания своего репозитория по данному заданию](https://classroom.github.com/assignment-invitations/421c715e93d3bacefb6dc658f50d880b/)
 
