@@ -1,6 +1,3 @@
-import urllib.request
-from xml.etree import ElementTree as ET
-
 def logger(f):
     import functools
     @functools.wraps(f)
@@ -16,6 +13,9 @@ def logger(f):
 
 
 def get_currencies():
+    import urllib.request
+    from xml.etree import ElementTree as ET
+    
     response = ET.parse(urllib.request.urlopen("http://www.cbr.ru/scripts/XML_daily.asp"))
     currencies = {}
     for line in response.findall('Valute'):
