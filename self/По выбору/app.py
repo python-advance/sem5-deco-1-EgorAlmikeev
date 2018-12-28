@@ -11,6 +11,6 @@ def logger(func):
         time = datetime.datetime.now() - time
     
         with open("log.txt", "a") as file:
-            file.write(time)
+            file.write(str(func.__name__) + ": " + str(time) "\n")
             
     return wrapper
